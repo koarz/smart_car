@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1410</width>
-    <height>890</height>
+    <width>1543</width>
+    <height>1015</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>10</y>
+     <x>20</x>
+     <y>30</y>
      <width>71</width>
      <height>71</height>
     </rect>
@@ -45,8 +45,8 @@
   <widget class="QLCDNumber" name="lcdNumber">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>710</y>
+     <x>650</x>
+     <y>720</y>
      <width>64</width>
      <height>23</height>
     </rect>
@@ -55,8 +55,8 @@
   <widget class="QLabel" name="Green_Led">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>710</y>
+     <x>600</x>
+     <y>720</y>
      <width>30</width>
      <height>30</height>
     </rect>
@@ -71,8 +71,8 @@
   <widget class="QLabel" name="Yellow_Led">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>710</y>
+     <x>600</x>
+     <y>720</y>
      <width>30</width>
      <height>30</height>
     </rect>
@@ -87,8 +87,8 @@
   <widget class="QLabel" name="Red_Led">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>710</y>
+     <x>600</x>
+     <y>720</y>
      <width>30</width>
      <height>30</height>
     </rect>
@@ -100,11 +100,11 @@
     <pixmap resource="Resource.qrc">:/images/red.jpg</pixmap>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="barrier_car">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>630</y>
+     <x>390</x>
+     <y>660</y>
      <width>72</width>
      <height>41</height>
     </rect>
@@ -116,13 +116,447 @@
     <pixmap resource="Resource.qrc">:/images/you.png</pixmap>
    </property>
   </widget>
-  <zorder>label_2</zorder>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>410</y>
+     <width>81</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>:/picture/background1 .png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>71</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>30</y>
+     <width>91</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>40</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>150</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>250</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_4">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>350</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_5">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>440</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_6">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>520</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>650</y>
+     <width>821</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background.png</pixmap>
+   </property>
+  </widget>
+  <widget class="Line" name="line_12">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>640</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>590</y>
+     <width>821</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background.png</pixmap>
+   </property>
+  </widget>
+  <widget class="Line" name="line_13">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>640</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_14">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>640</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_15">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>640</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_16">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>640</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_17">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>640</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_18">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>640</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>470</y>
+     <width>371</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../Big_Homework1/picture/circle1.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>180</y>
+     <width>72</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
+   </property>
+  </widget>
+  <widget class="Line" name="line_7">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>400</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_8">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>300</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_9">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>200</y>
+     <width>3</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>150</y>
+     <width>72</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/parking.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>970</x>
+     <y>100</y>
+     <width>361</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>1130</x>
+     <y>100</y>
+     <width>361</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>100</y>
+     <width>81</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>1160</x>
+     <y>310</y>
+     <width>72</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/parking.png</pixmap>
+   </property>
+  </widget>
+  <zorder>label_9</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_4</zorder>
   <zorder>pushButton</zorder>
   <zorder>lcdNumber</zorder>
   <zorder>Yellow_Led</zorder>
   <zorder>Green_Led</zorder>
   <zorder>Red_Led</zorder>
+  <zorder>label_8</zorder>
+  <zorder>line</zorder>
+  <zorder>line_2</zorder>
+  <zorder>line_3</zorder>
+  <zorder>line_4</zorder>
+  <zorder>line_5</zorder>
+  <zorder>line_6</zorder>
+  <zorder>barrier_car</zorder>
+  <zorder>line_12</zorder>
+  <zorder>line_13</zorder>
+  <zorder>line_14</zorder>
+  <zorder>line_15</zorder>
+  <zorder>line_16</zorder>
+  <zorder>line_17</zorder>
+  <zorder>line_18</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_10</zorder>
   <zorder>label</zorder>
+  <zorder>line_7</zorder>
+  <zorder>line_8</zorder>
+  <zorder>line_9</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_11</zorder>
+  <zorder>label_12</zorder>
+  <zorder>label_13</zorder>
  </widget>
  <resources>
   <include location="Resource.qrc"/>

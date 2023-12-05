@@ -5,5 +5,10 @@
         <file>green.jpg</file>
         <file>yellow.jpg</file>
         <file>you.png</file>
+        <file>background.png</file>
+        <file>background1 .png</file>
+        <file>circle1.png</file>
+        <file>Circle.png</file>
+        <file>parking.png</file>
     </qresource>
 </RCC>
