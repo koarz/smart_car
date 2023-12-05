@@ -17,9 +17,7 @@ class Widget : public QWidget
 
 public:
     explicit Widget(QWidget *parent = NULL);
-    void LightTime();
     void LightShow();
-    void TimeShow();
     void Init();
     ~Widget();
 
@@ -27,8 +25,12 @@ private slots:
     void on_pushButton_clicked(); //start按钮的槽函数
     void run1();                   //小车混流行驶
     void sleep(unsigned int msec);//延时函数
+    void onRun1Finished();
+    void onLightShowFinished();
 
-
+signals:
+    void startRun1();
+    void startLightShow();
 
 
 private:

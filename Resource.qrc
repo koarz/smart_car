@@ -4,5 +4,6 @@
         <file>red.jpg</file>
         <file>green.jpg</file>
         <file>yellow.jpg</file>
+        <file>you.png</file>
     </qresource>
 </RCC>
