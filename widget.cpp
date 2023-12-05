@@ -2,7 +2,6 @@
 #include "ui_widget.h"
 
 #include <QTime>
-#include <qmatrix.h>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QPropertyAnimation>
@@ -16,9 +15,6 @@ Widget::Widget(QWidget *parent) :
 {
     ui->setupUi(this);
     Init();
-
-//    connect(this, &Widget::startRun1, this, &Widget::onRun1Finished, Qt::QueuedConnection);
-//    connect(this, &Widget::startLightShow, this, &Widget::onLightShowFinished, Qt::QueuedConnection);
 }
 
 Widget::~Widget()
@@ -77,7 +73,7 @@ void Widget::run1() {
                                      ui->label_2->width()
                                      ,ui->label_2->height());
 
-            QMatrix matrix;
+            QTransform matrix;
             matrix.rotate((i - 400) * -0.45);                   //实现左转
             QPixmap pix = QPixmap(":/images/car.png").transformed(matrix, Qt::SmoothTransformation);
             ui->label_2->setPixmap(pix);
@@ -96,7 +92,7 @@ void Widget::run1() {
         } else {
             sleep(5);
             if (i < 350) {
-                QMatrix matrix;
+                QTransform matrix;
                 matrix.rotate(-90 + (i - 300) * -0.225);                      //向左变道
                 QPixmap pix = QPixmap(":/images/car.png").transformed(matrix, Qt::SmoothTransformation);
                 ui->label_2->setPixmap(pix);
@@ -104,7 +100,7 @@ void Widget::run1() {
                                          ui->label_2->width()
                                          ,ui->label_2->height());
             } else {
-                QMatrix matrix;
+                QTransform matrix;
                 matrix.rotate(-101.25 + (i - 350) * 0.225);                   //方向回正
                 QPixmap pix = QPixmap(":/images/car.png").transformed(matrix, Qt::SmoothTransformation);
                 ui->label_2->setPixmap(pix);
