@@ -1,7 +1,9 @@
 #include "widget.h"
 #include "ui_widget.h"
 
+
 #include <QTime>
+
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QPropertyAnimation>
@@ -9,10 +11,12 @@
 #include <QThread>
 
 
+
 Widget::Widget(QWidget *parent) :
-    QWidget(parent),
+    QWidget(parent), car_control(*this), light(*this),
     ui(new Ui::Widget)
 {
+    ;
     ui->setupUi(this);
     Init();
 }
@@ -27,59 +31,45 @@ void Widget::Init() {
     ui->Green_Led->show();
     ui->Red_Led->hide();
     ui->Yellow_Led->hide();
+//    ui->barrier_car->hide();
 
 }
 
 //start按钮点击事件
 void Widget::on_pushButton_clicked()
 {
-    connect(this, &Widget::startRun1, this, &Widget::onRun1Finished);
-    connect(this, &Widget::startLightShow, this, &Widget::onLightShowFinished);
-
-    QThread* run1Thread = new QThread;
-    QThread* lightShowThread = new QThread;
-
-    moveToThread(run1Thread);
-    moveToThread(lightShowThread);
-
-    connect(run1Thread, &QThread::started, this, &Widget::run1);
-    connect(lightShowThread, &QThread::started, this, &Widget::LightShow);
-
-    connect(run1Thread, &QThread::finished, run1Thread, &QThread::deleteLater);
-    connect(lightShowThread, &QThread::finished, lightShowThread, &QThread::deleteLater);
-
-    run1Thread->start();
-    lightShowThread->start();
-
-    emit startRun1();
-    emit startLightShow();
-//-------------------------------------------------------------------------------------------------
-
-
+    if (buttonIsClinked) {
+        return;
+    } else {
+        buttonIsClinked = true;
+    }
+    car_control.start();
+    light.start();
 }
 
 //小车混流行驶
 void Widget::run1() {
     //设定小车行走路线
-    for(int i = ui->label_2->y(); i < 600; i++){
+    for(int i = ui->label_2->y(); i < 650; i++){
         ui->label_2->setGeometry(ui->label_2->x(),i,
                                  ui->label_2->width()
                                  ,ui->label_2->height());
-        if (i < 400) {
+        if (i < 500) {
             sleep(10);
         } else {
             sleep(20);
             ui->label_2->setGeometry(ui->label_2->x() + 1, ui->label_2->y(),
                                      ui->label_2->width()
                                      ,ui->label_2->height());
-
             QTransform matrix;
-            matrix.rotate((i - 400) * -0.45);                   //实现左转
+            matrix.rotate((i - 500) * -0.6);                   //实现左转
             QPixmap pix = QPixmap(":/images/car.png").transformed(matrix, Qt::SmoothTransformation);
             ui->label_2->setPixmap(pix);
 
         }
     }
+
+    ui->barrier_car->show();
 
     //x = 550 为红绿灯的坐标
 
@@ -113,7 +103,10 @@ void Widget::run1() {
                                  ,ui->label_2->height());
         sleep(10);
     }
+}
 
+void Widget::run2() {
+    return;
 }
 
 //调整小车速度,红绿灯时间间隔
@@ -175,19 +168,11 @@ void Widget::LightShow() {
     }
 }
 
-void Widget::onRun1Finished()
+void Widget::updateposition(int i,int x,int y,int width, int height) //小车的位置更新
 {
-    // 你可以在这里添加在 run1 完成后的任何后续处理代码。
-    // 例如，重新启用用户界面元素、更新状态等。
-    // 如果你不需要添加特定的内容，可以将其保留为空。
-//    QMetaObject::invokeMethod(this, "updateUIAfterRun1", Qt::QueuedConnection);
+    if(i==1)  ui->label_2->setGeometry(x,y,width,height); //车 1 的位置更新
+    if(i==2)  ui->barrier_car->setGeometry(x,y,width,height); //车 2 的位置更新
+//    if(i==3)  ui->person->setGeometry(x,y,width,height); //person 的位置更新
 }
 
-void Widget::onLightShowFinished()
-{
-//    // 你可以在这里添加在 LightShow 完成后的任何后续处理代码。
-//    // 例如，重新启用用户界面元素、更新状态等。
-//    // 如果你不需要添加特定的内容，可以将其保留为空。
-//    QMetaObject::invokeMethod(this, "updateUIAfterLightShow", Qt::QueuedConnection);
-}
 
