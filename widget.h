@@ -7,6 +7,7 @@
 #include <QTimer>
 #include <QObject>
 #include <QThread>
+#include <atomic>
 
 namespace Ui {
 class Widget;
@@ -61,10 +62,8 @@ private:
     CarControl car_control;
     Light light;
     Ui::Widget *ui;
-    bool green_flag = true;
-    bool yellow_flag = false;
-    bool red_flag = false;
-    int time_count = 10;
+    std::atomic_int light_status;
+    std::atomic_int time_count = 15;
     bool buttonIsClinked = false;
 
 };

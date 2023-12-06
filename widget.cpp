@@ -58,14 +58,14 @@ void Widget::run1() {
             sleep(10);
         } else {
             sleep(20);
-            ui->label_2->setGeometry(ui->label_2->x() + 1, ui->label_2->y(),
-                                     ui->label_2->width()
-                                     ,ui->label_2->height());
+
             QTransform matrix;
             matrix.rotate((i - 500) * -0.6);                   //实现左转
             QPixmap pix = QPixmap(":/images/car.png").transformed(matrix, Qt::SmoothTransformation);
             ui->label_2->setPixmap(pix);
-
+            ui->label_2->setGeometry(ui->label_2->x() + 1, ui->label_2->y(),
+                                     ui->label_2->width()
+                                     ,ui->label_2->height());
         }
     }
 
@@ -97,16 +97,44 @@ void Widget::run1() {
             }
         }
     }
-    for (int i = ui->label_2->x(); i <= 550; i++) {
-        ui->label_2->setGeometry(i,ui->label_2->y(),
-                                 ui->label_2->width()
-                                 ,ui->label_2->height());
+    for (int i = 400; i <= 550; i++) {
+        if (i < 450) {
+            QTransform matrix;
+            matrix.rotate(-90 + (i - 400) * 0.225);
+            QPixmap pix = QPixmap(":/images/car.png").transformed(matrix, Qt::SmoothTransformation);
+            ui->label_2->setPixmap(pix);
+            ui->label_2->setGeometry(i, ui->label_2->y() + 0.5,
+                                     ui->label_2->width()
+                                     ,ui->label_2->height());
+        } else  if (i < 500) {
+            ui->label_2->setGeometry(i, ui->label_2->y() + 1,
+                                     ui->label_2->width()
+                                     ,ui->label_2->height());
+        } else {
+            QTransform matrix;
+            matrix.rotate(-78.75 + (i - 500) * -0.225);
+            QPixmap pix = QPixmap(":/images/car.png").transformed(matrix, Qt::SmoothTransformation);
+            ui->label_2->setPixmap(pix);
+            ui->label_2->setGeometry(i, ui->label_2->y(),
+                                     ui->label_2->width()
+                                     ,ui->label_2->height());
+        }
         sleep(10);
     }
+    run2();
 }
 
 void Widget::run2() {
-    return;
+    // check light status until green light
+    while (light_status != 0) {
+        sleep(1);
+    }
+    for (int i = 550; i <= 790; i++) {
+        ui->label_2->setGeometry(i, ui->label_2->y(),
+                                ui->label_2->width()
+                                ,ui->label_2->height());
+        sleep(10);
+    }
 }
 
 //调整小车速度,红绿灯时间间隔
@@ -119,52 +147,45 @@ void Widget::sleep(unsigned int msec) {
 
 void Widget::LightShow() {
     while(1) {
-        if (green_flag) {
-            while(time_count) {
-                ui->Green_Led->show();
-                ui->Red_Led->hide();
-                ui->Yellow_Led->hide();
-                time_count--;
-                sleep(500);
-                ui->lcdNumber->display(time_count);
-            }
-            time_count = 3;
+
+        // green
+        light_status = 0;
+        while(time_count) {
+            ui->Green_Led->show();
+            ui->Red_Led->hide();
+            ui->Yellow_Led->hide();
+            time_count--;
+            sleep(500);
             ui->lcdNumber->display(time_count);
-            green_flag = false;
-            yellow_flag = true;
-
         }
+        time_count = 3;
+        ui->lcdNumber->display(time_count);
 
-        if (yellow_flag) {
-            while(time_count) {
-                ui->Green_Led->hide();
-                ui->Red_Led->hide();
-                ui->Yellow_Led->show();
-                time_count--;
-                sleep(500);
-                ui->lcdNumber->display(time_count);
-            }
-            time_count = 10;
+        // yellow
+        light_status = 1;
+        while(time_count) {
+            ui->Green_Led->hide();
+            ui->Red_Led->hide();
+            ui->Yellow_Led->show();
+            time_count--;
+            sleep(500);
             ui->lcdNumber->display(time_count);
-            yellow_flag = false;
-            red_flag = true;
-
         }
+        time_count = 10;
+        ui->lcdNumber->display(time_count);
 
-        if (red_flag) {
-            while(time_count) {
-                ui->Green_Led->hide();
-                ui->Red_Led->show();
-                ui->Yellow_Led->hide();
-                time_count--;
-                sleep(500);
-                ui->lcdNumber->display(time_count);
-            }
-            green_flag = true;
-            time_count = 10;
-            ui->lcdNumber->display(time_count);
-            red_flag = false;
+        // red
+        light_status = 2;
+        while(time_count) {
+        ui->Green_Led->hide();
+        ui->Red_Led->show();
+        ui->Yellow_Led->hide();
+        time_count--;
+        sleep(500);
+        ui->lcdNumber->display(time_count);
         }
+        time_count = 15;
+        ui->lcdNumber->display(time_count);
     }
 }
 

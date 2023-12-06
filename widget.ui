@@ -365,34 +365,12 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label_10">
-   <property name="geometry">
-    <rect>
-     <x>840</x>
-     <y>390</y>
-     <width>551</width>
-     <height>521</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>Circle.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>1080</x>
-     <y>110</y>
-     <width>72</width>
+     <x>1050</x>
+     <y>100</y>
+     <width>121</width>
      <height>291</height>
     </rect>
    </property>
@@ -419,7 +397,7 @@
   <widget class="Line" name="line_8">
    <property name="geometry">
     <rect>
-     <x>1000</x>
+     <x>1110</x>
      <y>300</y>
      <width>3</width>
      <height>61</height>
@@ -432,8 +410,8 @@
   <widget class="Line" name="line_9">
    <property name="geometry">
     <rect>
-     <x>1000</x>
-     <y>200</y>
+     <x>1110</x>
+     <y>190</y>
      <width>3</width>
      <height>61</height>
     </rect>
@@ -445,9 +423,9 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>1080</x>
+     <x>1060</x>
      <y>110</y>
-     <width>72</width>
+     <width>121</width>
      <height>51</height>
     </rect>
    </property>
@@ -461,10 +439,10 @@
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>1080</x>
-     <y>60</y>
+     <x>1050</x>
+     <y>40</y>
      <width>361</width>
-     <height>51</height>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -477,10 +455,10 @@
   <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>1260</x>
-     <y>60</y>
-     <width>361</width>
-     <height>51</height>
+     <x>1230</x>
+     <y>40</y>
+     <width>391</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -493,7 +471,7 @@
   <widget class="QLabel" name="label_12">
    <property name="geometry">
     <rect>
-     <x>1360</x>
+     <x>1330</x>
      <y>110</y>
      <width>81</width>
      <height>351</height>
@@ -509,8 +487,8 @@
   <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
-     <x>1290</x>
-     <y>210</y>
+     <x>1260</x>
+     <y>200</y>
      <width>72</width>
      <height>91</height>
     </rect>
@@ -525,8 +503,8 @@
   <widget class="QLabel" name="barrier_car_2">
    <property name="geometry">
     <rect>
-     <x>1300</x>
-     <y>210</y>
+     <x>1270</x>
+     <y>200</y>
      <width>72</width>
      <height>41</height>
     </rect>
@@ -536,6 +514,22 @@
    </property>
    <property name="pixmap">
     <pixmap resource="Resource.qrc">:/images/you.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>380</y>
+     <width>541</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/Circle.png</pixmap>
    </property>
   </widget>
   <zorder>label_9</zorder>
@@ -554,7 +548,6 @@
   <zorder>line_4</zorder>
   <zorder>line_5</zorder>
   <zorder>line_6</zorder>
-  <zorder>barrier_car</zorder>
   <zorder>line_12</zorder>
   <zorder>line_13</zorder>
   <zorder>line_14</zorder>
@@ -562,8 +555,6 @@
   <zorder>line_16</zorder>
   <zorder>line_17</zorder>
   <zorder>line_18</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_10</zorder>
   <zorder>label</zorder>
   <zorder>line_7</zorder>
   <zorder>line_8</zorder>
@@ -574,6 +565,9 @@
   <zorder>label_12</zorder>
   <zorder>label_13</zorder>
   <zorder>barrier_car_2</zorder>
+  <zorder>label_14</zorder>
+  <zorder>barrier_car</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources>
   <include location="Resource.qrc"/>
