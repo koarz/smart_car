@@ -10,5 +10,6 @@
         <file>circle1.png</file>
         <file>Circle.png</file>
         <file>parking.png</file>
+        <file>people.png</file>
     </qresource>
 </RCC>

@@ -368,9 +368,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>1050</x>
+     <x>1020</x>
      <y>100</y>
-     <width>121</width>
+     <width>181</width>
      <height>291</height>
     </rect>
    </property>
@@ -439,10 +439,10 @@
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>1050</x>
+     <x>1020</x>
      <y>40</y>
-     <width>361</width>
-     <height>71</height>
+     <width>391</width>
+     <height>121</height>
     </rect>
    </property>
    <property name="text">
@@ -455,26 +455,10 @@
   <widget class="QLabel" name="label_11">
    <property name="geometry">
     <rect>
-     <x>1230</x>
+     <x>1190</x>
      <y>40</y>
-     <width>391</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_12">
-   <property name="geometry">
-    <rect>
-     <x>1330</x>
-     <y>110</y>
-     <width>81</width>
-     <height>351</height>
+     <width>431</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="text">
@@ -488,9 +472,9 @@
    <property name="geometry">
     <rect>
      <x>1260</x>
-     <y>200</y>
-     <width>72</width>
-     <height>91</height>
+     <y>130</y>
+     <width>111</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="text">
@@ -504,9 +488,9 @@
    <property name="geometry">
     <rect>
      <x>1270</x>
-     <y>200</y>
-     <width>72</width>
-     <height>41</height>
+     <y>140</y>
+     <width>91</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="text">
@@ -530,6 +514,56 @@
    </property>
    <property name="pixmap">
     <pixmap resource="Resource.qrc">:/images/Circle.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>1180</x>
+     <y>120</y>
+     <width>16</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/yellow.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>1360</x>
+     <y>40</y>
+     <width>441</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Resource.qrc">:/images/background1 .png</pixmap>
    </property>
   </widget>
   <zorder>label_9</zorder>
@@ -559,14 +593,15 @@
   <zorder>line_7</zorder>
   <zorder>line_8</zorder>
   <zorder>line_9</zorder>
-  <zorder>label_5</zorder>
   <zorder>label_7</zorder>
   <zorder>label_11</zorder>
-  <zorder>label_12</zorder>
   <zorder>label_13</zorder>
   <zorder>barrier_car_2</zorder>
   <zorder>label_14</zorder>
   <zorder>barrier_car</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_10</zorder>
+  <zorder>label_12</zorder>
   <zorder>label_2</zorder>
  </widget>
  <resources>

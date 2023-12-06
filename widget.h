@@ -52,6 +52,7 @@ private slots:
     void run1();        //小车混流行驶
     void run2();
     void sleep(unsigned int msec);//延时函数
+    std::pair<double, double> caculate_oncircle(double x,double y);
 
 
 signals:

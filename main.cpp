@@ -1,3 +1,7 @@
+// github : https://github.com/koarz/smart_car.git
+// author : azhongisme koarz
+
+
 #include "widget.h"
 #include <QApplication>
 
